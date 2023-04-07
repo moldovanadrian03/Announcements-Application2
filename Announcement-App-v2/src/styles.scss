@@ -2,3 +2,6 @@
 //install bulma via git clone into the node_modules folder
 @import './app/main-style.scss';
 @import '../node_modules/bulma/bulma.sass';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
