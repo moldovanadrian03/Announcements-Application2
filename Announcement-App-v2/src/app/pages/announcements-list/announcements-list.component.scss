@@ -1,0 +1,22 @@
+@import '../../main-style.scss';
+
+.announcements-list-container {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.floating-add-button {
+  position: fixed;
+  bottom: 0;
+
+  width: 1300px;
+  height: 68px;
+
+  font-size: 24px;
+
+  border-radius: 30px;
+  box-shadow: 0px 0px 15px 10px rgba($purple, 0.2);
+
+}

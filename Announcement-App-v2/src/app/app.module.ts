@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { AnnouncementsListComponent } from './pages/announcements-list/announcements-list.component';
 import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddAnnouncementComponent } from './pages/add-announcement/add-announcement.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnnouncementsListComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
+    AddAnnouncementComponent,
   ],
   imports: [
     BrowserModule,
