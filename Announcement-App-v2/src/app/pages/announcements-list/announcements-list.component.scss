@@ -5,24 +5,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-color: rgb(166, 164, 164);
+  .announcements {
+    min-width: 180px;
+    max-width: 315px;
+
+    margin-top: 10px;
+    margin-bottom: 80px;
+  }
+  .floating-add-button {
+    position: fixed;
+    bottom: 5px;
+
+    width: 1300px;
+    height: 68px;
+
+    font-size: 24px;
+
+    border: 0.1px solid whitesmoke;
+
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px 10px rgba($purple, 0.2);
+
+  }
 }
-.announcements {
-  min-width: 180px;
-  max-width: 315px;
 
-  margin-top: 10px;
-  margin-bottom: 80px;
-}
-.floating-add-button {
-  position: fixed;
-  bottom: 0;
-
-  width: 1300px;
-  height: 68px;
-
-  font-size: 24px;
-
-  border-radius: 30px;
-  box-shadow: 0px 0px 15px 10px rgba($purple, 0.2);
-
-}
