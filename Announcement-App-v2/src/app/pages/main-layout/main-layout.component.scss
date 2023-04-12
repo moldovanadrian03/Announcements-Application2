@@ -27,4 +27,11 @@
     color: whitesmoke;
     font-size: 24px;
   }
+  &:hover {
+    background: linear-gradient(to right, $purple, pink);
+
+    h1 {
+      color: rgb(255, 255, 255);
+    }
+  }
 }
