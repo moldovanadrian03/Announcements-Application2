@@ -8,6 +8,7 @@ import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddAnnouncementComponent } from './pages/add-announcement/add-announcement.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AnnouncementComponent } from './announcement/announcement.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     AnnouncementsListComponent,
     MainLayoutComponent,
     AddAnnouncementComponent,
+    AnnouncementComponent,
   ],
   imports: [
     BrowserModule,
