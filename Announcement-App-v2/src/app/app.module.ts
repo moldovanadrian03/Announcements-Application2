@@ -10,6 +10,16 @@ import { AddAnnouncementComponent } from './pages/add-announcement/add-announcem
 import { HttpClientModule } from '@angular/common/http';
 import { AnnouncementComponent } from './announcement/announcement.component';
 
+import { MatCardModule} from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +32,12 @@ import { AnnouncementComponent } from './announcement/announcement.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatIconModule,
+    MatInputModule,
+    MatProgressBarModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
