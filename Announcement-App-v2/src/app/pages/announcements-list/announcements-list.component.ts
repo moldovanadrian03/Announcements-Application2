@@ -8,8 +8,6 @@ import { AnnouncementService } from 'src/app/services/announcement.service';
   styleUrls: ['./announcements-list.component.scss']
 })
 export class AnnouncementsListComponent implements OnInit {
-  // @Input() id: string;
-  // @Output() getAnn2 = new EventEmitter<boolean>();
 
   announcements: Announcement[];
 
@@ -24,12 +22,13 @@ export class AnnouncementsListComponent implements OnInit {
       this.announcements = announcements;
     });
   }
+  updateAnnList(isUpdated: boolean) {
+    if(isUpdated) {
+      this.announcementService.getAnnouncements().subscribe(announcements => {
+        console.log("Announcements list: ", announcements);
+        this.announcements = announcements;
+      })
+    }
+  }
 
-  // deleteAnnouncement(id: string) {
-  //   console.log("id: ", id);
-  //   this.announcementService.deleteAnnouncement(id).subscribe(announcement => {
-  //     console.log(announcement);
-  //     this.getAnn2.emit(true);
-  //   })
-  // }
 }
