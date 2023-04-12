@@ -15,6 +15,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { ByAuthorPipe } from './by-author.pipe';
 
 
 
@@ -27,6 +28,7 @@ import { MatSelectModule } from '@angular/material/select';
     MainLayoutComponent,
     AddAnnouncementComponent,
     AnnouncementComponent,
+    ByAuthorPipe,
   ],
   imports: [
     BrowserModule,
