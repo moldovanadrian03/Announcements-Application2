@@ -1,7 +1,6 @@
 @import '../../main-style.scss';
 
 .announcements-list-container {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +10,8 @@
   min-width: 180px;
   max-width: 315px;
 
-  margin: 15px;
+  margin-top: 10px;
+  margin-bottom: 80px;
 }
 .floating-add-button {
   position: fixed;

@@ -25,4 +25,8 @@ export class AnnouncementService {
     return this.httpClient.get<Announcement[]>(this.baseURL, this.httpOptions);
   }
 
+  deleteAnnouncement(id: string) {
+    console.log("Announcement ", id, " is deleted.");
+    return this.httpClient.delete(this.baseURL + "/" + this.httpOptions);
+  }
 }
