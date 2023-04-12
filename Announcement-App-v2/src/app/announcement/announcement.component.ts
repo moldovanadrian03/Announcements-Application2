@@ -85,6 +85,7 @@ export class AnnouncementComponent implements OnInit{
   @Input() author: string;
   @Input() imageUrl: string;
   @Input() id: string;
+  @Input() link: string;
 
   @Output() getAnn = new EventEmitter<boolean>();
 

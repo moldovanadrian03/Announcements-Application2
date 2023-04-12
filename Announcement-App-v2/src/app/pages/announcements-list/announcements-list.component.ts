@@ -99,8 +99,13 @@ export class AnnouncementsListComponent implements OnInit {
       this.announcementService.getAnnouncements().subscribe(announcements => {
         console.log("Announcements list: ", announcements);
         this.announcements = announcements;
-      })
+      });
     }
+  }
+
+  generateNoteUrl(announcement: Announcement) {
+    let annId = this.announcementService.getId(announcement);
+    return annId;
   }
 
 }

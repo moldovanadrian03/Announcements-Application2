@@ -9,6 +9,7 @@
        [id] = announcement.id
        [imageUrl]="announcement.imageUrl"
        (getAnn)="updateAnnList($event)"
+       [link]="generateNoteUrl(announcement).toString()"
        >
       </app-announcement>
     </div>

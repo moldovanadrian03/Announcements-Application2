@@ -7,8 +7,9 @@ import { AddAnnouncementComponent } from './pages/add-announcement/add-announcem
 const routes: Routes = [
   { path: '', component: MainLayoutComponent, children: [
     { path: '', component: AnnouncementsListComponent },
-    { path: 'new', component: AddAnnouncementComponent }
-  ] }
+    { path: 'new', component: AddAnnouncementComponent},
+    { path: ':id', component: AddAnnouncementComponent }
+    ] }
 ];
 
 @NgModule({

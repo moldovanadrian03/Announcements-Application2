@@ -14,10 +14,20 @@ export class AnnouncementService {
     })
   };
 
+  announcements: Announcement[] = new Array<Announcement>();
+
   constructor(private httpClient: HttpClient) { }
 
   serviceCall() {
     console.log("Service was called.");
+  }
+
+  get(id: number) {
+    return this.announcements[id];
+  }
+
+  getId(announcement: Announcement) {
+    return this.announcements.indexOf(announcement);
   }
 
   getAnnouncements(): Observable<Announcement[]> {
@@ -28,6 +38,5 @@ export class AnnouncementService {
   deleteAnnouncement(id: string) {
     console.log("Announcement ", id, " is deleted.");
     return this.httpClient.delete(this.baseURL + "/" + id, this.httpOptions);
-
   }
 }
