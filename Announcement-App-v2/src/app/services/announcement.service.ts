@@ -27,6 +27,7 @@ export class AnnouncementService {
 
   deleteAnnouncement(id: string) {
     console.log("Announcement ", id, " is deleted.");
-    return this.httpClient.delete(this.baseURL + "/" + this.httpOptions);
+    return this.httpClient.delete(this.baseURL + "/" + id, this.httpOptions);
+
   }
 }

@@ -1,15 +1,15 @@
 <mat-card class="announcement-container">
   <mat-card-header class="header-container">
-    <img [src] = "imageUrl" >
+    <img [src] = "imageUrl"  [routerLink]=" '/new' ">
   </mat-card-header>
 
-  <div class="body-container">
+  <div class="body-container" [routerLink]=" '/new' ">
     <p class="title">{{title}}</p>
     <p class="message">{{message}}</p>
     <p class="author">{{author | byAuthor}}</p>
   </div>
-  <div class="x-button" (click)="deleteAnnouncement(id)">
-    <button class="x-button" mat-icon-button>
+  <div class="x-button-container" >
+    <button class="x-button" mat-icon-button (click)="deleteAnnouncement(id)">
       <mat-icon>clear</mat-icon>
     </button>
     <!-- <button mat-icon-button [routerLink]=" ['/add',id ]">Edit</button> -->

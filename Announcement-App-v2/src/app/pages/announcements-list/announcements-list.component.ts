@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Announcement } from 'src/app/announcement';
 import { AnnouncementService } from 'src/app/services/announcement.service';
 
@@ -8,6 +8,9 @@ import { AnnouncementService } from 'src/app/services/announcement.service';
   styleUrls: ['./announcements-list.component.scss']
 })
 export class AnnouncementsListComponent implements OnInit {
+  // @Input() id: string;
+  // @Output() getAnn2 = new EventEmitter<boolean>();
+
   announcements: Announcement[];
 
   constructor(private announcementService: AnnouncementService) {}
@@ -21,4 +24,12 @@ export class AnnouncementsListComponent implements OnInit {
       this.announcements = announcements;
     });
   }
+
+  // deleteAnnouncement(id: string) {
+  //   console.log("id: ", id);
+  //   this.announcementService.deleteAnnouncement(id).subscribe(announcement => {
+  //     console.log(announcement);
+  //     this.getAnn2.emit(true);
+  //   })
+  // }
 }
