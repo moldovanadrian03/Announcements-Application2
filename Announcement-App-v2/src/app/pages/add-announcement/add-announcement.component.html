@@ -1,5 +1,59 @@
-<p>add-announcement works!</p>
+<div class="form-container">
 
+  <form #announcementForm = "ngForm">
+
+    <div class="field">
+      <label class="label">Title</label>
+      <div class="control">
+        <input type = "text" name="title" class="input" required >
+      </div>
+    </div>
+    <br>
+
+    <div class="field">
+      <label class="label">Message</label>
+      <div class="control">
+        <input type = "text" name="message" class="input">
+      </div>
+    </div>
+    <br>
+
+    <div class="field">
+      <label class="label">Author</label>
+      <div class="control">
+        <input type = "text" name="author" class="input">
+      </div>
+    </div>
+    <br>
+
+    <div class="field">
+      <label class="label">ImageUrl</label>
+      <div class="control">
+        <input type = "text" name="imageUrl" class="input">
+      </div>
+    </div>
+    <br>
+
+    <h4>Select category</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select  name="selectedCategory">
+        <mat-option  >
+
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="field is-grouped is-pulled-right">
+      <div class="control">
+        <button class="button is-text" type="button" >Cancel</button>
+      </div>
+      <div class="control">
+        <button class="button is-primary" type="submit" [disabled]="!announcementForm.valid">Save</button>
+      </div>
+    </div>
+  </form>
+</div>
 
 
 
