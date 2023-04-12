@@ -94,6 +94,7 @@ export class AnnouncementsListComponent implements OnInit {
       this.announcements = announcements;
     });
   }
+
   updateAnnList(isUpdated: boolean) {
     if(isUpdated) {
       this.announcementService.getAnnouncements().subscribe(announcements => {

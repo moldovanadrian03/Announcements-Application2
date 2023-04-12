@@ -54,6 +54,10 @@ export class AddAnnouncementComponent implements OnInit{
         });
     }
 
+    onCancel() {
+      this.router.navigateByUrl('/');
+    }
+
   //   addAnnouncement():void {
   //     let announcement:Announcement={
   //     title:this.title,
