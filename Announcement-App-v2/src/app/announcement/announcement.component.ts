@@ -16,9 +16,7 @@ export class AnnouncementComponent implements OnInit{
   constructor(private announcementService: AnnouncementService) {}
 
   ngOnInit(): void {
-      this.announcementService.getAnnouncements().subscribe(response => {
-        console.log(response);
-      });
+
   }
 
 }

@@ -21,6 +21,7 @@ export class AnnouncementService {
   }
 
   getAnnouncements(): Observable<Announcement[]> {
+    console.log("Service announcements: ");
     return this.httpClient.get<Announcement[]>(this.baseURL, this.httpOptions);
   }
 

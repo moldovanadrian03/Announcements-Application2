@@ -1,11 +1,16 @@
 <div class="announcements-list-container">
   <p>announcements-list works!</p>
 
-  <button class="button floating-add-button is-primary" [routerLink]="'/new'">+ Add</button>
-  <button class="button floating-add-button is-primary" [routerLink]="'/new'">+ Add</button>
-  <button class="button floating-add-button is-primary" [routerLink]="'/new'">+ Add</button>
-  <button class="button floating-add-button is-primary" [routerLink]="'/new'">+ Add</button>
-  <button class="button floating-add-button is-primary" [routerLink]="'/new'">+ Add</button>
-
-
+  <div>
+    <div *ngFor = "let announcement of announcements" class="announcements">
+      <app-announcement
+       [message] = announcement.message
+       [title] = announcement.title
+       [author] = announcement.author
+       [id] = announcement.id
+       [imageUrl]="announcement.imageUrl"
+       >
+      </app-announcement>
+    </div>
+  </div>  <button class="button floating-add-button is-primary" [routerLink]="'/new'">+ Add</button>
 </div>
