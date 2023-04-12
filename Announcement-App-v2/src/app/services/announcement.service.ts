@@ -20,8 +20,8 @@ export class AnnouncementService {
     console.log("Service was called.");
   }
 
-  getAnnouncements(): Observable<Announcement> {
-    return this.httpClient.get<Announcement>(this.baseURL, this.httpOptions);
+  getAnnouncements(): Observable<Announcement[]> {
+    return this.httpClient.get<Announcement[]>(this.baseURL, this.httpOptions);
   }
 
 }

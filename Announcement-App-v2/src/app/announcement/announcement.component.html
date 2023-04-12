@@ -1,1 +1,20 @@
-<p>announcement works!</p>
+<mat-card class="announcement-container">
+  <mat-card-header class="header-container">
+    <img [src] = "imageUrl" >
+  </mat-card-header>
+
+  <div class="body-container">
+    <p class="message">{{message}}</p>
+    <p class="title">{{title}}</p>
+    <p class="author">{{author | byAuthor}}</p>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
+  <div class="x-button">
+    <button mat-icon-button (click)="deleteAnnouncement(id)">
+      <mat-icon>clear</mat-icon>
+    </button>
+    <button mat-icon-button [routerLink]=" ['/add',id ]">Edit</button>
+  </div>
+</mat-card>
+
+
