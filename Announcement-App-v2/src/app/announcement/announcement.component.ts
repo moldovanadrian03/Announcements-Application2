@@ -19,4 +19,11 @@ export class AnnouncementComponent implements OnInit{
 
   }
 
+  deleteAnnouncement(id: string) {
+    console.log("id: ", id);
+    this.announcementService.deleteAnnouncement(id).subscribe(announcement => {
+      console.log(announcement);
+    })
+  }
+
 }

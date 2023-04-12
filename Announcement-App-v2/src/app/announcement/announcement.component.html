@@ -9,11 +9,11 @@
     <p class="author">{{author | byAuthor}}</p>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   </div>
-  <div class="x-button">
+  <div class="x-button" (click)="deleteAnnouncement(id)">
     <button mat-icon-button>
       <mat-icon>clear</mat-icon>
     </button>
-    <button mat-icon-button [routerLink]=" ['/add',id ]">Edit</button>
+    <!-- <button mat-icon-button [routerLink]=" ['/add',id ]">Edit</button> -->
   </div>
 </mat-card>
 
