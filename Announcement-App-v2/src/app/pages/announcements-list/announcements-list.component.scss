@@ -7,6 +7,12 @@
   justify-content: center;
   align-items: center;
 }
+.announcements {
+  min-width: 180px;
+  max-width: 315px;
+
+  margin: 15px;
+}
 .floating-add-button {
   position: fixed;
   bottom: 0;
