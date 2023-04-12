@@ -15,7 +15,7 @@ export class AnnouncementsListComponent implements OnInit {
   ngOnInit(){
     //test the service
     this.announcementService.serviceCall();
-
+    //get the announcements from the service
     this.announcementService.getAnnouncements().subscribe(announcements => {
       console.log("Announcements list: ", announcements);
       this.announcements = announcements;
