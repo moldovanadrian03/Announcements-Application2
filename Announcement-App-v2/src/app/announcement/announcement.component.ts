@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AnnouncementService } from '../services/announcement.service';
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
@@ -86,6 +86,8 @@ export class AnnouncementComponent implements OnInit{
   @Input() imageUrl: string;
   @Input() id: string;
 
+  @Output() getAnn = new EventEmitter<boolean>();
+
   constructor(private announcementService: AnnouncementService) {}
 
   ngOnInit(): void {
@@ -96,6 +98,7 @@ export class AnnouncementComponent implements OnInit{
     console.log("id: ", id);
     this.announcementService.deleteAnnouncement(id).subscribe(announcement => {
       console.log(announcement);
+      this.getAnn.emit(true);
     })
   }
 
